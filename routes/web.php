@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    dd(phpinfo());
-//    return view('welcome');
-});
+Route::get('/', 'ThreadsController@index');
 Route::get('/threads', 'ThreadsController@index');
 Route::get('/threads/{thread}', 'ThreadsController@show');
 
