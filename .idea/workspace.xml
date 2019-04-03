@@ -179,11 +179,10 @@
       <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="513" />
-    <option name="y" value="215" />
-    <option name="width" value="1868" />
-    <option name="height" value="1102" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="777" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -242,12 +241,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Web Page.threads1111">
+  <component name="RunManager" selected="PHP Web Page.threads test to company mac">
     <configuration name="pca7.com" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" filter_connections="FILTER" server_name="homestead" session_id="vagrant" />
-    <configuration name="threads1111" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="homestead" start_url="/threads" />
+    <configuration name="threads test to company mac" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="homestead" start_url="/threads" />
     <list>
       <item itemvalue="PHP Remote Debug.pca7.com" />
-      <item itemvalue="PHP Web Page.threads1111" />
+      <item itemvalue="PHP Web Page.threads test to company mac" />
     </list>
   </component>
   <component name="SvnConfiguration">
