@@ -2,11 +2,22 @@
 
 namespace Tests;
 
+use App\Exceptions\Handler;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Symfony\Component\Debug\ExceptionHandler;
 
 abstract class TestCase extends BaseTestCase
 {
     use CreatesApplication;
+
+    protected $oldExceptionhandler;
+
+    protected function setUp():void
+    {
+        parent::setUp();
+
+        $this->disableExceptionHandling();
+    }
 
     protected function signIn($user = null)
     {
@@ -14,6 +25,25 @@ abstract class TestCase extends BaseTestCase
 
         $this->actingAs($user);
 
+        return $this;
+    }
+
+    protected function disableExceptionHandling()
+    {
+        $this->oldExceptionhandler = $this->app->make(ExceptionHandler::class);
+
+        $this->app->instance(ExceptionHandler::class, new class extends Handler{
+            public function __construct(){}
+            public function report(\Exception $e){}
+            public function render($request, \Exception $e){
+                throw $e;
+            }
+        });
+    }
+
+    protected function withExceptionHandling()
+    {
+        $this->app->instance(ExceptionHandler::class, $this->oldExceptionhandler);
         return $this;
     }
 }

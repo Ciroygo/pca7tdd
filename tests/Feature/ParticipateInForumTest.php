@@ -14,9 +14,9 @@ class ParticipateInForumTest extends TestCase
     /** @test */
     public function unauthenticated_user_may_no_add_replies()
     {
-        $this->expectException('Illuminate\Auth\AuthenticationException');
+        $this->withExceptionHandling();
 
-        $this->post('threads/1/replies', []);
+        $this->post('threads/some-channel/1/replies', [])->assertRedirect('/login');
     }
 
     /** @test */
@@ -36,5 +36,16 @@ class ParticipateInForumTest extends TestCase
         // Then their reply should be visible on the page
         $this->get($thread->path())
             ->assertSee($reply->body);
+    }
+
+    /** @test */
+    public function a_reply_required_a_body()
+    {
+        $this->withExceptionHandling()->signIn();
+
+        $thread = create('App\Thread');
+        $reply = make('App\Reply', ['body' => null]);
+
+        $this->post($thread->path() . '/replies', $reply->toArray())->assertSessionHasErrors('body');
     }
 }
