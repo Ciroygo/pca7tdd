@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f9cd5d0-8ee0-41bf-b18c-a19c7588cdbf" name="Default" comment="回复数添加到首页，回复数排序还未开始,补充文件">
+    <list default="true" id="6f9cd5d0-8ee0-41bf-b18c-a19c7588cdbf" name="Default" comment="配置文件更新">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ThreadsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="622">
-              <caret line="47" column="40" lean-forward="true" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+            <state relative-caret-position="502">
+              <caret line="39" column="31" lean-forward="true" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
               <folding>
                 <element signature="e#40#56#0#PHP" expanded="true" />
               </folding>
@@ -407,7 +407,7 @@
       <workItem from="1554342618514" duration="15353000" />
       <workItem from="1554716274916" duration="6300000" />
       <workItem from="1554863980696" duration="13391000" />
-      <workItem from="1554886135614" duration="249000" />
+      <workItem from="1554886135614" duration="537000" />
     </task>
     <task id="LOCAL-00001" summary="添加gitignore">
       <created>1554255018797</created>
@@ -465,11 +465,18 @@
       <option name="project" value="LOCAL" />
       <updated>1554886237718</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="配置文件更新">
+      <created>1554886395808</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1554886395808</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45430000" />
+    <option name="totallyTimeSpent" value="45718000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="301" y="41" width="1669" height="1367" extended-state="0" />
@@ -508,7 +515,8 @@
     <MESSAGE value="分页功能实现" />
     <MESSAGE value="回复数添加到首页，回复数排序还未开始" />
     <MESSAGE value="回复数添加到首页，回复数排序还未开始,补充文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="回复数添加到首页，回复数排序还未开始,补充文件" />
+    <MESSAGE value="配置文件更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="配置文件更新" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -799,8 +807,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ThreadsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="622">
-          <caret line="47" column="40" lean-forward="true" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+        <state relative-caret-position="502">
+          <caret line="39" column="31" lean-forward="true" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
           <folding>
             <element signature="e#40#56#0#PHP" expanded="true" />
           </folding>
