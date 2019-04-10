@@ -34,6 +34,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto mt-1">
                         <li class="mr-2"><a href="/threads">All Threads</a></li>
+                        <li class="mr-2"><a href="/threads/create">New Thread</a></li>
                         <li class="dropdown">
 
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-hidden="true"
