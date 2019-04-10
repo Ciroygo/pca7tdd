@@ -22,7 +22,7 @@ class ThreadsController extends Controller
     {
         //
         if($channel->exists){
-            $threads = $channel->threads()->latest()->id;
+            $threads = $channel->threads()->latest()->get();
         }else{
             $threads = Thread::latest()->get();
         }
