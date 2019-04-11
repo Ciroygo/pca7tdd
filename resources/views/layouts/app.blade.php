@@ -64,7 +64,7 @@
                                 @endforeach
                             </ul>
                         </li>
-                    </ul>
+                    </ul>å
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
