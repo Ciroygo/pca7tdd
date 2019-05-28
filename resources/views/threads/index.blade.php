@@ -8,7 +8,7 @@
                     <div class="card-header">forum Threads</div>
 
                     <div class="card-body">
-                        @foreach($threads as $thread)
+                        @forelse($threads as $thread)
                             <article>
                                 <div class="level">
                                     <h4 class="flex">
@@ -22,7 +22,9 @@
                             </article>
 
                             <hr>
-                        @endforeach
+                        @empty
+                            <p>没有相关文章以供显示</p>
+                        @endforelse
                     </div>
                 </div>
             </div>
