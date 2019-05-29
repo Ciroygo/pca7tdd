@@ -26,6 +26,7 @@ Route::post('/threads', 'ThreadsController@store');
 
 Route::post('/threads/{channel}/{thread}/replies', 'RepliesController@store');
 
+Route::delete('/replies/{reply}', 'RepliesController@destroy');
 Route::post('/replies/{reply}/favorites', 'FavoritesController@store');
 
 
@@ -34,6 +35,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/profiles/{user}', 'ProfilesController@show')->name('profile');
+
 
 
 
