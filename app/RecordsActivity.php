@@ -14,6 +14,10 @@ trait RecordsActivity
                 $model->recordActivity($event);
             });
         }
+
+        static::deleting(function ($model){
+            $model->activity()->delete();
+        });
     }
 
     protected static function getActivitiesToRecord()
@@ -34,5 +38,10 @@ trait RecordsActivity
     protected function getActivityType($event)
     {
         return $event . '_' . strtolower((new \ReflectionClass($this))->getShortName());
+    }
+
+    protected function activity()
+    {
+        return $this->morphMany('App\Activity', 'subject');
     }
 }
