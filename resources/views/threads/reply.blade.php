@@ -10,12 +10,13 @@
                 </h5>
 
                 <div>
-                    <form action="/replies/{{ $reply->id }}/favorites" method="post">
-                        {{ csrf_field() }}
-                        <button type="submit" class="btn btn-outline-primary" {{ $reply->isFavorited() ? 'disabled' : '' }}>
-                            {{ $reply->favorites_count }} {{ str_plural('Favorite', $reply->favorites_count) }}
-                        </button>
-                    </form>
+                    <favorite :reply="{{ $reply }}">组件损坏</favorite>
+{{--                    <form action="/replies/{{ $reply->id }}/favorites" method="post">--}}
+{{--                        {{ csrf_field() }}--}}
+{{--                        <button type="submit" class="btn btn-outline-primary" {{ $reply->isFavorited() ? 'disabled' : '' }}>--}}
+{{--                            {{ $reply->favorites_count }} {{ str_plural('Favorite', $reply->favorites_count) }}--}}
+{{--                        </button>--}}
+{{--                    </form>--}}
                 </div>
             </div>
 
