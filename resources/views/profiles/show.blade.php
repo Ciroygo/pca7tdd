@@ -10,7 +10,7 @@
                         <small> 注册于 {{ $profileUser->created_at->diffForHumans() }}</small>
                     </h1>
                 </div>
-                @foreach($activities as $date => $activity)
+                @forelse($activities as $date => $activity)
                     <h3 class="page-header mt-5">{{ $date }}</h3>
 
                     @foreach($activity as $record)
@@ -18,28 +18,9 @@
                             @include("profiles.activities.{$record->type}", ['activity' => $record])
                         @endif
                     @endforeach
-                @endforeach
-{{--                @foreach($threads as $thread)--}}
-{{--                    <div class="card mt-2">--}}
-{{--                        <div class="card-header">--}}
-{{--                            <div class="level">--}}
-{{--                                <span class="flex">--}}
-{{--                                    <a href="{{ route('profile', $thread->creator) }}">{{ $thread->creator->name }}</a> 发表于--}}
-
-{{--                                    <a href="{{ $thread->path() }}">{{ $thread->title }}</a>--}}
-{{--                                </span>--}}
-
-{{--                                <span>{{ $thread->created_at->diffForHumans() }}</span>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <div class="card-body">--}}
-{{--                            {{ $thread->body }}--}}
-{{--                        </div>--}}
-
-{{--                    </div>--}}
-{{--                @endforeach--}}
-{{--                <div class="mt-4"></div>--}}
-{{--                {{ $threads->links() }}--}}
+                @empty
+                    <p>There is no activity for this user yet.</p>
+                @endforelse
             </div>
         </div>
     </div>
