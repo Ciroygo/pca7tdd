@@ -27,11 +27,13 @@
                     </div>
                 </div>
 
-                @foreach ($replies as $reply)
-                    @include('threads.reply')
-                @endforeach
-                <div class="mt-4"></div>
-                {{ $replies->links() }}
+                <replies :data="{{ $thread->replies }}}"></replies>
+
+{{--                @foreach ($replies as $reply)--}}
+{{--                    @include('threads.reply')--}}
+{{--                @endforeach--}}
+{{--                <div class="mt-4"></div>--}}
+{{--                {{ $replies->links() }}--}}
 
                 @if (auth()->check())
                     <form method="post" action="{{ $thread->path() . '/replies' }}" class="mt-4">
